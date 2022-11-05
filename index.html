@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Segundo Challenge Alura ONE</title>
+        <link rel="shortcut icon" href="./logo.png">
+        <link rel="stylesheet" href="./reset.css">
+        <link rel="stylesheet" href="./estilo.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="contenedor">
+            <header>
+                <img class="logoima" src="./logo.png" alt="Logo Alura">
+                <h1 class="tituloInicial" onclick="revelar()">HANGMAN GAME</h1>
+            </header>
+            <section id="div-juego">
+                <div class="estado">
+                    <canvas id="miCanvas">Change browser to continue.</canvas>
+                </div>
+                <div id="correcto">
+                </div>
+                <div id="incorrecto">
+                </div>
+                <div id="play-button">
+                    <button id="bot-nuevo" class="boton" type="button" onclick="nuevo()">New Game</button>
+                    <button id="bot-desistir" class="boton" type="button" onclick="desistir()">Decline</button>
+                </div>
+            </section>
+            <div id="home-button">
+                <button id="bot-iniciar" class="boton" type="button" onclick="iniciar()">START GAME</button>
+                <button id="bot-agregar" class="boton" type="button" onclick="agregar()">ADD WORD</button>
+            </div>
+            <form id="div-agregar" action="javascript:void(0)">
+                <label for="nuevaPalabra">Insert a new word</label></label>
+                <input id="nuevaPalabra" class="input-padron" type="text" maxlength="10" placeholder="Words of maximum 10 letters.">
+                <input id="bot-submit" class="boton" type="submit" onclick="newWord()" value="¡Save!">
+                <p>↑ capital letters only, no accents or numbers ↑</p>
+            </form>
+            <footer>
+                <p class="copyright">V.1.0 &copy; Copyright Marialejandra Ruiz Diaz</p>
+            </footer>
+        </div>
+        <script type="text/javascript" src="./javascript.js"></script>
+        <script type="text/javascript" src="./canvas.js"></script>
+    </body>
+</html>
